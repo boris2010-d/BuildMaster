@@ -1,65 +1,65 @@
-<!DOCTYPE html>
-<html lang="bg">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Construction</title>
-    <link rel="stylesheet" href="BuildMaster.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="bg">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elite Construction</title>
+        <link rel="stylesheet" href="BuildMaster.css">
+    </head>
+    <body>
 
-<header>
-    <h1>Elite Construction</h1>
-    <p>Строим бъдещето заедно</p>
-</header>
+    <header>
+        <h1>Elite Construction</h1>
+        <p>Строим бъдещето заедно</p>
+    </header>
 
-<section class="projects">
-    <h2>Нашите проекти</h2>
+    <section class="projects">
+        <h2>Нашите проекти</h2>
 
-    <div class="cards">
+        <div class="cards">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a920
-            <h3>Жилищна сграда Лазур</h3>
-            <button onclick="showInfo('Луксозна жилищна сграда с 50 апартамента.')">
-                Виж повече
-            </button>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a920
+                <h3>Жилищна сграда Лазур</h3>
+                <button onclick="showInfo('Луксозна жилищна сграда с 50 апартамента.')">
+                    Виж повече
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511818966892-d2?w=600
+                <h3>Бизнес Център</h3>
+                <button onclick="showInfo('Модерен офис комплекс в центъра на града.')">
+                    Виж повече
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512917774080-999w=600
+                <h3>Green Park Villas</h3>
+                <button onclick="showInfo('Комплекс от екологични еднофамилни къщи.')">
+                    Виж повече
+                </button>
+            </div>
+
         </div>
+    </section>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1511818966892-d2?w=600
-            <h3>Бизнес Център</h3>
-            <button onclick="showInfo('Модерен офис комплекс в центъра на града.')">
-                Виж повече
-            </button>
-        </div>
+    <section class="contact">
+        <h2>Свържете се с нас</h2>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1512917774080-999w=600
-            <h3>Green Park Villas</h3>
-            <button onclick="showInfo('Комплекс от екологични еднофамилни къщи.')">
-                Виж повече
-            </button>
-        </div>
+        <form id="contactForm">
+            <input type="text" placeholder="Вашето име" required>
+            <input type="email" placeholder="Имейл" required>
+            <input type="tel" placeholder="Телефон" required>
+            <textarea placeholder="Съобщение" required></textarea>
 
-    </div>
-</section>
+            <button type="submit">Изпрати</button>
+        </form>
 
-<section class="contact">
-    <h2>Свържете се с нас</h2>
+        <p id="message"></p>
+    </section>
 
-    <form id="contactForm">
-        <input type="text" placeholder="Вашето име" required>
-        <input type="email" placeholder="Имейл" required>
-        <input type="tel" placeholder="Телефон" required>
-        <textarea placeholder="Съобщение" required></textarea>
-
-        <button type="submit">Изпрати</button>
-    </form>
-
-    <p id="message"></p>
-</section>
-
-<script src="BuildMaster.js"></script>
-</body>
-</html>
+    <script src="BuildMaster.js"></script>
+    </body>
+    </html>
