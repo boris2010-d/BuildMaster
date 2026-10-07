@@ -1,112 +1,560 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    background:#f4f4f4;
+html {
+    scroll-behavior: smooth;
 }
 
-header{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:50px;
+body {
+    background: #f5f5f5;
+    color: #222;
 }
 
-header p{
-    margin-top:10px;
-    color:#ccc;
+
+/* ================= HEADER ================= */
+
+.header {
+    min-height: 100vh;
+    color: white;
 }
 
-.projects{
-    padding:40px;
-    text-align:center;
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 7%;
 }
 
-.cards{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    margin-top:30px;
-    flex-wrap:wrap;
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
-.card{
-    background:white;
-    width:300px;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
+.logo span,
+.footer-logo span {
+    color: #ff9800;
+    margin-left: 5px;
 }
 
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
 
-.card h3{
-    padding:15px;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-.card button{
-    margin-bottom:15px;
-    padding:10px 20px;
-    border:none;
-    background:#ff9800;
-    color:white;
-    cursor:pointer;
-    border-radius:5px;
+.nav-links a:hover {
+    color: #ff9800;
 }
 
-.card button:hover{
-    background:#e68900;
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1800")
+        center / cover;
 }
 
-.contact{
-    background:white;
-    padding:40px;
+.hero-content {
+    max-width: 700px;
 }
 
-.contact h2{
-    text-align:center;
-    margin-bottom:20px;
+.small-title,
+.section-title p,
+.section-label {
+    color: #ff9800;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
 }
 
-form{
-    max-width:600px;
-    margin:auto;
+.hero h1 {
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #ff9800;
+}
+
+.hero-content > p:not(.small-title) {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 15px 28px;
+
+    background: #ff9800;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #e68900;
+    transform: translateY(-3px);
+}
+
+
+/* ================= PROJECTS ================= */
+
+.projects {
+    padding: 100px 7%;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.section-title span {
+    color: #777;
+    line-height: 1.6;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-top: 55px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+
+    transition: 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    background: #ff9800;
+    color: white;
+
+    padding: 7px 12px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    border-radius: 4px;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card button {
+    border: none;
+    background: transparent;
+
+    color: #e68900;
+
+    font-weight: bold;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card button:hover {
+    color: #222;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 100px 7%;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+        ),
+        url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600")
+        center / cover;
+
+    color: white;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-text {
+    max-width: 750px;
+}
+
+.about h2 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.about-text > p:not(.section-label) {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.stats {
+    display: flex;
+    gap: 60px;
+    margin-top: 45px;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats strong {
+    color: #ff9800;
+    font-size: 35px;
+}
+
+.stats span {
+    color: #aaa;
+    margin-top: 5px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    padding: 100px 7%;
+    background: white;
+}
+
+form {
+    max-width: 750px;
+    margin: 50px auto 0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
 input,
-textarea{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:5px;
+textarea {
+    width: 100%;
+
+    padding: 16px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
 }
 
-textarea{
-    height:120px;
+input:focus,
+textarea:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.1);
 }
 
-form button{
-    width:100%;
-    padding:12px;
-    background:#222;
-    color:white;
-    border:none;
-    cursor:pointer;
-    font-size:16px;
+textarea {
+    height: 150px;
+    resize: vertical;
 }
 
-#message{
-    text-align:center;
-    margin-top:15px;
-    color:green;
-    font-weight:bold;
+form button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #222;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #ff9800;
+}
+
+#message {
+    text-align: center;
+    margin-top: 18px;
+
+    color: #28a745;
+    font-weight: bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111;
+    color: #777;
+
+    padding: 35px 7%;
+
+    text-align: center;
+}
+
+.footer-logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 100;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+
+    max-width: 550px;
+    width: 100%;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    animation: modalOpen 0.3s ease;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.modal-content > p:not(.section-label) {
+    color: #666;
+    line-height: 1.7;
+}
+
+.close {
+    position: absolute;
+
+    right: 20px;
+    top: 15px;
+
+    border: none;
+    background: none;
+
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal-button {
+    margin-top: 25px;
+
+    border: none;
+    background: #ff9800;
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+@keyframes modalOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .stats {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 100px 25px;
+    }
+
+    .projects,
+    .about,
+    .contact {
+        padding: 70px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .about h2 {
+        font-size: 35px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
 }
