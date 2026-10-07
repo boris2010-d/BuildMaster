@@ -1,65 +1,283 @@
-    <!DOCTYPE html>
-    <html lang="bg">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Elite Construction</title>
-        <link rel="stylesheet" href="BuildMaster.css">
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <header>
-        <h1>Elite Construction</h1>
-        <p>Строим бъдещето заедно</p>
-    </header>
+    <title>Elite Construction | Строим бъдещето</title>
 
-    <section class="projects">
-        <h2>Нашите проекти</h2>
+    <link rel="stylesheet" href="BuildMaster.css">
+</head>
 
-        <div class="cards">
+<body>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a920
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">ELITE<span>CONSTRUCTION</span></div>
+
+        <div class="nav-links">
+            <a href="#home">Начало</a>
+            <a href="#projects">Проекти</a>
+            <a href="#about">За нас</a>
+            <a href="#contact">Контакти</a>
+        </div>
+    </nav>
+
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <p class="small-title">СТРОИМ С КАЧЕСТВО</p>
+
+            <h1>Създаваме пространства за <span>бъдещето</span></h1>
+
+            <p>
+                Професионално строителство, модерен дизайн
+                и качество, на което можете да се доверите.
+            </p>
+
+            <a href="#projects" class="hero-button">
+                Разгледай проектите
+            </a>
+        </div>
+    </div>
+</header>
+
+
+<section class="projects" id="projects">
+
+    <div class="section-title">
+        <p>НАШИТЕ ПРОЕКТИ</p>
+        <h2>Проекти, с които се гордеем</h2>
+        <span>
+            Съчетава­ме модерен дизайн, функционалност и високо качество.
+        </span>
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="image-container">
+                <img
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800"
+                    alt="Жилищна сграда"
+                >
+
+                <span class="tag">ЖИЛИЩНО</span>
+            </div>
+
+            <div class="card-content">
                 <h3>Жилищна сграда Лазур</h3>
-                <button onclick="showInfo('Луксозна жилищна сграда с 50 апартамента.')">
-                    Виж повече
-                </button>
-            </div>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1511818966892-d2?w=600
-                <h3>Бизнес Център</h3>
-                <button onclick="showInfo('Модерен офис комплекс в центъра на града.')">
-                    Виж повече
-                </button>
-            </div>
+                <p>
+                    Луксозна жилищна сграда с 50 модерни апартамента
+                    и висок клас общи пространства.
+                </p>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1512917774080-999w=600
-                <h3>Green Park Villas</h3>
-                <button onclick="showInfo('Комплекс от екологични еднофамилни къщи.')">
-                    Виж повече
+                <button onclick="showInfo(
+                    'Луксозна жилищна сграда с 50 апартамента, модерна архитектура и висок клас общи части.'
+                )">
+                    Виж повече →
                 </button>
             </div>
 
         </div>
-    </section>
 
-    <section class="contact">
-        <h2>Свържете се с нас</h2>
 
-        <form id="contactForm">
-            <input type="text" placeholder="Вашето име" required>
-            <input type="email" placeholder="Имейл" required>
-            <input type="tel" placeholder="Телефон" required>
-            <textarea placeholder="Съобщение" required></textarea>
+        <div class="card">
 
-            <button type="submit">Изпрати</button>
-        </form>
+            <div class="image-container">
+                <img
+                    src="https://images.unsplash.com/photo-1511818966892-d2eecb555bc2?w=800"
+                    alt="Бизнес център"
+                >
+
+                <span class="tag">БИЗНЕС</span>
+            </div>
+
+            <div class="card-content">
+                <h3>Business Center</h3>
+
+                <p>
+                    Модерен офис комплекс в центъра на града,
+                    създаден за динамичния бизнес.
+                </p>
+
+                <button onclick="showInfo(
+                    'Модерен офис комплекс с бизнес пространства, конферентни зали и удобна локация.'
+                )">
+                    Виж повече →
+                </button>
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="image-container">
+                <img
+                    src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800"
+                    alt="Green Park Villas"
+                >
+
+                <span class="tag">ЛУКС</span>
+            </div>
+
+            <div class="card-content">
+                <h3>Green Park Villas</h3>
+
+                <p>
+                    Комплекс от модерни еднофамилни къщи,
+                    заобиколени от зеленина и спокойствие.
+                </p>
+
+                <button onclick="showInfo(
+                    'Екологичен комплекс от еднофамилни къщи с просторни дворове и модерна архитектура.'
+                )">
+                    Виж повече →
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+    <div class="about-content">
+
+        <div class="about-text">
+            <p class="section-label">ЗА НАС</p>
+
+            <h2>Повече от строителна компания.</h2>
+
+            <p>
+                В Elite Construction вярваме, че една сграда не е просто
+                бетон и стомана. Тя е място, в което хората живеят,
+                работят и създават своето бъдеще.
+            </p>
+
+            <p>
+                Нашият екип работи с внимание към всеки детайл,
+                използвайки съвременни технологии и висококачествени
+                материали.
+            </p>
+
+            <div class="stats">
+
+                <div>
+                    <strong>15+</strong>
+                    <span>години опит</span>
+                </div>
+
+                <div>
+                    <strong>120+</strong>
+                    <span>завършени проекта</span>
+                </div>
+
+                <div>
+                    <strong>98%</strong>
+                    <span>доволни клиенти</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+        <p>КОНТАКТИ</p>
+        <h2>Нека създадем нещо заедно</h2>
+        <span>Свържете се с нас и разкажете за вашия проект.</span>
+    </div>
+
+    <form id="contactForm">
+
+        <div class="form-row">
+
+            <input
+                type="text"
+                placeholder="Вашето име"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Имейл адрес"
+                required
+            >
+
+        </div>
+
+        <input
+            type="tel"
+            placeholder="Телефон"
+            required
+        >
+
+        <textarea
+            placeholder="Разкажете ни за вашия проект..."
+            required
+        ></textarea>
+
+        <button type="submit">
+            Изпрати запитване →
+        </button>
 
         <p id="message"></p>
-    </section>
 
-    <script src="BuildMaster.js"></script>
-    </body>
-    </html>
+    </form>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ELITE<span>CONSTRUCTION</span>
+    </div>
+
+    <p>© 2026 Elite Construction. Всички права запазени.</p>
+
+</footer>
+
+
+<!-- MODAL -->
+
+<div class="modal" id="infoModal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">
+            ×
+        </button>
+
+        <p class="section-label">ПРОЕКТ</p>
+
+        <h2>Elite Construction</h2>
+
+        <p id="modalText"></p>
+
+        <button class="modal-button" onclick="closeModal()">
+            Затвори
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="BuildMaster.js"></script>
+
+</body>
+</html>
